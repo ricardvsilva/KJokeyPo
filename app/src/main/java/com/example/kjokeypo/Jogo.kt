@@ -76,19 +76,12 @@ class Jogo : AppCompatActivity() {
         // BOTÃO RODAR
         btnRodar.setOnClickListener(View.OnClickListener {
 
-<<<<<<< HEAD
-            var textView2:TextView = findViewById(R.id.textView2)
-
-            if (retAct == "true") {
-                mp?.start()
-                mp?.isLooping ?: true
-=======
             var textView2:TextView = findViewById(R.id.statusGame)
 
             if (retAct == "true") {
                 mp?.start()
                 mp?.isLooping = true
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
+
             }
 
             findViewById<RadioButton>(R.id.radioUm).isEnabled = true
@@ -102,10 +95,7 @@ class Jogo : AppCompatActivity() {
 
             if(btnAuxRoda) {
                 frameAnime.start ()
-<<<<<<< HEAD
-=======
                 findViewById<Button>(R.id.btnRodar).isEnabled = false
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
                 btnAuxRoda = false
             }else if (!btnAuxRoda){
                 frameAnime.stop ()
@@ -119,10 +109,9 @@ class Jogo : AppCompatActivity() {
                 mp?.stop()
                 mp?.prepare()
             }
-<<<<<<< HEAD
-=======
+
             findViewById<Button>(R.id.btnRodar).isEnabled = true
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
+
             btnAuxRoda = true
             auxBtnVeredito = 1
             veredito()
@@ -135,10 +124,7 @@ class Jogo : AppCompatActivity() {
                 mp?.stop()
                 mp?.prepare()
             }
-<<<<<<< HEAD
-=======
             findViewById<Button>(R.id.btnRodar).isEnabled = true
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
             btnAuxRoda = true
             auxBtnVeredito = 2
             veredito()
@@ -151,10 +137,8 @@ class Jogo : AppCompatActivity() {
                 mp?.stop()
                 mp?.prepare()
             }
-<<<<<<< HEAD
-=======
             findViewById<Button>(R.id.btnRodar).isEnabled = true
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
+
             btnAuxRoda = true
             auxBtnVeredito = 3
             veredito()
@@ -218,18 +202,6 @@ class Jogo : AppCompatActivity() {
     }
     fun inicioJogo(view: View) {
 
-<<<<<<< HEAD
-        var btnInicio:Button
-        btnInicio = findViewById(R.id.btnInicioJogo)
-        var textView2:TextView = findViewById(R.id.textView2)
-        textView2.text = "VERSUS"
-
-        if (btnAuxLiga){
-            btnInicio.text = "Parar"
-
-            findViewById<View>(R.id.btnRodar).isEnabled = true
-
-=======
         // Pegar o Idioma atual do aplicativo
         var localLanguage = resources.configuration.locale.language
 
@@ -237,12 +209,10 @@ class Jogo : AppCompatActivity() {
         btnInicio = findViewById(R.id.btnInicioJogo)
         var statusGame:TextView = findViewById(R.id.statusGame)
         statusGame.text = "VERSUS"
-
         if (btnAuxLiga){
             if(localLanguage == "pt") { btnInicio.text = "PARAR" }
             if(localLanguage == "en") { btnInicio.text = "STOP" }
             findViewById<View>(R.id.btnRodar).isEnabled = true
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
             btnAuxLiga = false
         }
         else if (!btnAuxLiga){
@@ -253,25 +223,19 @@ class Jogo : AppCompatActivity() {
             frameAnime.stop ()
             btnAuxRoda = true
 
-<<<<<<< HEAD
-            btnInicio.text = "Início"
-=======
             if(localLanguage == "pt") { btnInicio.text = "INICIO" }
             if(localLanguage == "en") { btnInicio.text = "START" }
 
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
             findViewById<View>(R.id.radioUm).isEnabled = false
             findViewById<View>(R.id.radioDois).isEnabled = false
             findViewById<View>(R.id.radioTres).isEnabled = false
             findViewById<View>(R.id.btnRodar).isEnabled = false
             btnAuxLiga = true
 
-<<<<<<< HEAD
-=======
             mp?.pause()
             mp?.stop()
             mp?.prepare()
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
+
         }
     }
     fun btnZerar(view: View) {
@@ -287,11 +251,7 @@ class Jogo : AppCompatActivity() {
     }
     fun veredito(){
 
-<<<<<<< HEAD
-        var txtJogoResultado:TextView = findViewById(R.id.textView2)
-=======
         var txtJogoResultado:TextView = findViewById(R.id.statusGame)
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
         var xcontaVitorias:TextView = findViewById(R.id.contaVitorias)
         var xcontaEmpates:TextView = findViewById(R.id.contaEmpates)
         var xcontaDerrotas:TextView = findViewById(R.id.contaDerrotas)
@@ -305,43 +265,28 @@ class Jogo : AppCompatActivity() {
             passaValorSalvoParaTextBox=false
         }
 
-<<<<<<< HEAD
-=======
         // Pegar o Idioma atual do aplicativo
         var localLanguage = resources.configuration.locale.language
 
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
         var ram:Int = (1..3).random()
 
         // ESCOLHIDO PEDRA = 1
         if(auxBtnVeredito == 1){
             if(ram == 1){
-<<<<<<< HEAD
-                txtJogoResultado.text = "EMPATE"
-=======
                 if(localLanguage == "pt") { txtJogoResultado.text = "EMPATE" }
                 if(localLanguage == "en") { txtJogoResultado.text = "DRAW" }
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
                 contaEmpate ++
                 imgRodaJogo.setBackgroundResource(R.drawable.rock)
             }
             if(ram == 2){
-<<<<<<< HEAD
-                txtJogoResultado.text = "VITÓRIAS"
-=======
                 if(localLanguage == "pt") { txtJogoResultado.text = "VITÓRIA" }
                 if(localLanguage == "en") { txtJogoResultado.text = "WIN" }
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
                 contaVitorias2 ++
                 imgRodaJogo.setBackgroundResource(R.drawable.scisor)
             }
             if(ram == 3){
-<<<<<<< HEAD
-                txtJogoResultado.text = "DERROTA"
-=======
                 if(localLanguage == "pt") { txtJogoResultado.text = "DERROTA" }
                 if(localLanguage == "en") { txtJogoResultado.text = "LOSE" }
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
                 contaDerrotas2 ++
                 imgRodaJogo.setBackgroundResource(R.drawable.sheet)
             }
@@ -350,32 +295,20 @@ class Jogo : AppCompatActivity() {
         // ESCOLHIDO PAPEL = 2
         if(auxBtnVeredito == 2){
             if(ram == 1){
-<<<<<<< HEAD
-                txtJogoResultado.text = "VITÓRIAS"
-=======
                 if(localLanguage == "pt") { txtJogoResultado.text = "VITÓRIA" }
                 if(localLanguage == "en") { txtJogoResultado.text = "WIN" }
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
                 contaVitorias2 ++
                 imgRodaJogo.setBackgroundResource(R.drawable.rock)
             }
             if(ram == 2){
-<<<<<<< HEAD
-                txtJogoResultado.text = "DERROTAS"
-=======
                 if(localLanguage == "pt") { txtJogoResultado.text = "DERROTA" }
                 if(localLanguage == "en") { txtJogoResultado.text = "LOSE" }
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
                 contaDerrotas2 ++
                 imgRodaJogo.setBackgroundResource(R.drawable.scisor)
             }
             if(ram == 3){
-<<<<<<< HEAD
-                txtJogoResultado.text = "EMPATE"
-=======
                 if(localLanguage == "pt") { txtJogoResultado.text = "EMPATE" }
                 if(localLanguage == "en") { txtJogoResultado.text = "DRAW" }
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
                 contaEmpate ++
                 imgRodaJogo.setBackgroundResource(R.drawable.sheet)
             }
@@ -384,32 +317,20 @@ class Jogo : AppCompatActivity() {
         // ESCOLHIDO TESOURA = 3
         if(auxBtnVeredito == 3){
             if(ram == 1){
-<<<<<<< HEAD
-                txtJogoResultado.text = "DERROTA"
-=======
                 if(localLanguage == "pt") { txtJogoResultado.text = "DERROTA" }
                 if(localLanguage == "en") { txtJogoResultado.text = "LOSE" }
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
                 contaDerrotas2 ++
                 imgRodaJogo.setBackgroundResource(R.drawable.rock)
             }
             if(ram == 2){
-<<<<<<< HEAD
-                txtJogoResultado.text = "EMPATE"
-=======
                 if(localLanguage == "pt") { txtJogoResultado.text = "EMPATE" }
                 if(localLanguage == "en") { txtJogoResultado.text = "DRAW" }
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
                 contaEmpate ++
                 imgRodaJogo.setBackgroundResource(R.drawable.scisor)
             }
             if(ram == 3){
-<<<<<<< HEAD
-                txtJogoResultado.text = "VITORIAS"
-=======
                 if(localLanguage == "pt") { txtJogoResultado.text = "VITÓRIA" }
                 if(localLanguage == "en") { txtJogoResultado.text = "WIN" }
->>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
                 contaVitorias2 ++
                 imgRodaJogo.setBackgroundResource(R.drawable.sheet)
             }
