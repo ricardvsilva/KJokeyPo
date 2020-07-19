@@ -1,20 +1,36 @@
 package com.example.kjokeypo
 
 import android.app.Activity
+<<<<<<< HEAD
 import android.content.Intent
 import android.content.res.Configuration
 import android.content.res.Resources
+=======
+import android.content.Context
+import android.content.Intent
+import android.content.res.Configuration
+import android.content.res.Resources
+import android.media.AudioManager
+>>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
 import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.DisplayMetrics
+<<<<<<< HEAD
 import android.view.TextureView
 import android.view.View
 import android.widget.TextView
+=======
+import android.view.View
+>>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_config.*
 import java.util.*
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
 val Hab_Musicas = "Musicas"
 val salvaHabMusicas = "true"
 
@@ -58,7 +74,10 @@ class Config : AppCompatActivity() {
             intentIdioma.putExtra("idioma", "en")
             startActivityForResult(intentIdioma, AUX_IDIOMA)
         })
+<<<<<<< HEAD
 
+=======
+>>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
         btnBr.setOnClickListener({
             setAppLocale("pt")
             setContentView(R.layout.activity_config)
@@ -85,11 +104,34 @@ class Config : AppCompatActivity() {
     }
     override fun finish() {
         val dados = Intent()
+<<<<<<< HEAD
+=======
+        val mAlramMAnager  = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        // switch Music On or OFF
+>>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
         if(swtMusica.isChecked) {
             dados.putExtra("retorno", "true")
         }else{
             dados.putExtra("retorno", "false")
         }
+<<<<<<< HEAD
+=======
+        // switch System Tone On or OFF
+        if (swtToque.isChecked){
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                mAlramMAnager.adjustStreamVolume(AudioManager.STREAM_SYSTEM, AudioManager.ADJUST_UNMUTE, 0)
+            } else {
+                mAlramMAnager.setStreamMute(AudioManager.STREAM_SYSTEM, false)
+            }
+        }else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                mAlramMAnager.adjustStreamVolume(AudioManager.STREAM_SYSTEM, AudioManager.ADJUST_MUTE, 0)
+            } else {
+                mAlramMAnager.setStreamMute(AudioManager.STREAM_SYSTEM, true)
+            }
+        }
+
+>>>>>>> bcbceee... Atualização Arquivo. Alguns Bugs corrigidos.
         setResult(Activity.RESULT_OK, dados)
         super.finish()
     }
