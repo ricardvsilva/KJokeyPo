@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kbtnTxtJogo">PLAY</string>
+    <string name="kbtnTxtConf">SETTINGS</string>
+    <string name="kbtnTxtOpe">OPENNING</string>
+    <string name="kbtnTxtInicio">START</string>
+    <string name="kbtnTxtRodar">RUN</string>
+    <string name="ktxtVitorias">WIN</string>
+    <string name="ktxtEmpates">DRAW</string>
+    <string name="ktxtDerrotas">LOSE</string>
+    <string name="ktxtVoltar">BACK</string>
+    <string name="ktxtZerar">RESET</string>
+    <string name="ktxtLabelConfig">SETTINGS</string>
+    <string name="ktxtMusica">MUSIC</string>
+    <string name="ktxtToques">TONES</string>
+    <string name="ktxtDificuldade">DIFICULTY</string>
+    <string name="ktxtFacil">EASY</string>
+    <string name="ktxtNormal">NORMAL</string>
+    <string name="ktxtDificil">HARD</string>
+    <string name="ktxtIdioma">LANGUAGE</string>
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name" translatable="false">KJokeyPo</string>
+    <string name="kbtnTxtJogo">JOGAR</string>
+    <string name="kbtnTxtConf">CONFIGURAÇÕES</string>
+    <string name="kbtnTxtOpe">ABERTURA</string>
+    <string name="kbtnTxtInicio">INICIO</string>
+    <string name="kbtnTxtRodar">RODAR</string>
+    <string name="ktxtVitorias">VITÓRIAS</string>
+    <string name="ktxtEmpates">EMPATES</string>
+    <string name="ktxtDerrotas">DERROTAS</string>
+    <string name="ktxtVoltar">VOLTAR</string>
+    <string name="ktxtZerar">ZERAR</string>
+    <string name="ktxtLabelConfig">CONFIGURAÇÕES</string>
+    <string name="ktxtMusica">MUSICAS</string>
+    <string name="ktxtToques">TOQUES</string>
+    <string name="ktxtDificuldade">DIFICULDADE</string>
+    <string name="ktxtFacil">FÁCIL</string>
+    <string name="ktxtNormal">NORMAL</string>
+    <string name="ktxtDificil">DIFICIL</string>
+    <string name="ktxtIdioma">IDIOMA</string>
+</resources>
